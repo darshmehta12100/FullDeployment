@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <h1><div style="text-align: center;color: Blue;">Profit Prediction from startup spendings</div></h1>
+    <hr>
+    <br>
+    <h3><div style="text-align: center;">Enter values for State for Startup, R&D Cost, Administration Cost and Marketing Cost</div></h3>
+    <br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <form method="POST" action="/predict">
+                    <div class="form-group">
+                        <label for="NewYork"><p class="font-weight-bold">New York</p></label>
+                        <input type="text" name="NewYork">
+                        <small id="NYHelp" class="form-text-text-muted">Enter 1 if startup is based in New York or enter 0</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="California"><p class="font-weight-bold">California</p></label>
+                        <input type="text" name="California">
+                        <small id="CaliforniaHelp" class="form-text-text-muted">Enter 1 if startup is based in California or enter 0</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Florida"><p class="font-weight-bold">Florida</p></label>
+                        <input type="text" name="Florida">
+                        <small id="FloridaHelp" class="form-text-text-muted">Enter 1 if startup is based in Florida or enter 0</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="RnDSpend"><p class="font-weight-bold">Research and Development</p></label>
+                        <input type="text" name="RnDSpend">
+                        <small id="RnDSpendHelp" class="form-text-text-muted">Enter amount spent on R&D</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="AdminSpend"><p class="font-weight-bold">Administration Cost</p></label>
+                        <input type="text" name="AdminSpend">
+                        <small id="AdminSpendHelp" class="form-text-text-muted">Enter amount spent on Administration</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="MarketSpend"><p class="font-weight-bold">Marketing Cost</p></label>
+                        <input type="text" name="MarketSpend">
+                        <small id="MarketSpendHelp" class="form-text-text-muted">Enter amount spent on Marketing</small>
+                    </div>
+
+                    <input class="btn btn-primary" value="Submit" type="submit"></input>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
